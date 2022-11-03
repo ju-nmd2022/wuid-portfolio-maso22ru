@@ -33,6 +33,13 @@ h4 {
     font-variant-caps: small-caps;
 }
 
+h5 {
+color: #09762e;
+font-size: 2em;
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-variant-caps: small-caps;
+}
+
 
 .hobbies {
     text-align: left;
