@@ -29,7 +29,8 @@ h1 {
 
 .about_jonk {
     text-align: justify;
-    margin: 12%;
+    margin-top: 12%;
+    margin-bottom: 12%;
 }
 
 .favorites {
