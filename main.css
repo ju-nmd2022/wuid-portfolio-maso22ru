@@ -1,78 +1,133 @@
-h1 {
-    color:#09762e;
-    font-size: 2em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-variant-caps: small-caps;
+html, body {
+    margin: 0px;
+    line-height: 20px;
 }
 
-.column-250px {
-    columns: 2;
-    column-gap: 80px;
-    text-align: justify;
+main {
+    max-width: 900px;
+    margin: auto;
 }
 
-
-h2 {
-    color:#09762e;
-    font-size: 2em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-variant-caps: small-caps;
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 11rem 1fr 2rem;
+    grid-template-areas:
+        "header header header"
+        ". content ."
+        "footer footer footer";
+        min-height: 100vh;
 }
 
-h3 {
-    color:#09762e;
-    font-size: 2em;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-variant-caps: small-caps;
+.header{
+    background-color: rgb(184, 204, 184);
+    grid-area: header;
+    
 }
 
-h4 {
-    color: #09762e;
-    font-size: 2em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-variant-caps: small-caps;
+.content {
+    background-color: rgb(255, 255, 255);
+    grid-area: content;
+    align-items: center;
+    justify-content: center;
 }
 
-h5 {
-color: #09762e;
-font-size: 2em;
-font-family: Georgia, 'Times New Roman', Times, serif;
-font-variant-caps: small-caps;
-margin-bottom: 0%;
+.footer{
+    background-color: rgb(230, 199, 156);
+    grid-area: footer;
 }
 
-
-.hobbies {
-    text-align: left;
-}
-
-.image {
-    text-align:end;
-}
-
-.hobbies_image {
-    columns: 2;
-}
-
-.all_hobbies_image {
-    padding-top: 8%;
+.headlines {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    font-variant: small-caps;
+    letter-spacing: 3px;
     padding-bottom: 4%;
+    padding-top: 2%;
 }
 
-body {
-    background-color: #001004;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: #f5f5f2;
-
-    line-height: 30px;
-
-    padding-left: 12%;
-    padding-right: 12%;
+.headlines_small {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-footer {
-    text-align: center;
-    padding: 20%;
-    font-style: italic;
+.button {
+    margin-top: 5px;
+    color: rgb(7, 7, 7);
+    background-color: rgb(230, 199, 156);
+    border-radius: 10%;
+    border-color: rgb(207, 172, 123);
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
 }
 
+.header_all{
+    max-width: 900px;
+
+}
+
+.menu_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-self:stretch;
+}
+
+.content_portfolio{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 10rem);
+    grid-template-rows: repeat(auto-fit, 20rem);
+    row-gap: 20px;
+    column-gap: 40px;
+    justify-content: center;
+    align-items: end;
+}
+
+
+
+.hobbies { 
+    columns: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   
+}
+
+@media screen and (max-width: 850px){
+    .hobbies {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.image_hobbies {
+    align-content: right;
+}
+
+.favorites {
+    text-align: left;
+    column-gap: 25px;
+    row-gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+@media screen and (max-width: 850px){
+    .favorites {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+@media screen and (min-width:1240px) and (max-width:2000px) {
+    body {
+    background-color: rgb(184, 204, 184);
+}
+}
