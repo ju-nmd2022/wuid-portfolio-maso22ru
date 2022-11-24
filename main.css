@@ -33,8 +33,8 @@ main {
     grid-area: content;
     align-items: center;
     justify-content: center;
-    padding-left: 15%;
-    padding-right: 13%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 5%;
     padding-bottom: 5%;
 }
@@ -93,41 +93,10 @@ main {
     
 }
 
-.songtext {
-    text-align: center;
-    font-style: italic;
-    font-family: fantasy;
-    font-variant: small-caps;
-
-}
-.animatedBox {
-    width: 20rem;
-    height: 5rem;
-    border-radius: 50%;
-    animation-name: songBox;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
-    animation-duration: 3s;
-    animation-direction: normal;
-    animation-fill-mode: none;
-}
-
-@keyframes songBox {
-    0% {
-        background-color: rgb(105, 169, 221);
-    }
-    100% {
-        background-color:  rgb(114, 190, 114);
-        
-    }
-}
-
 .hobbies { 
     columns: 2;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-   
 }
 
 @media screen and (max-width: 850px){
@@ -173,7 +142,144 @@ main {
     }
 }
 
+
+
+.songtext {
+    font-size: 1rem;
+    color:  rgb(63, 102, 63);
+    text-align: center;
+    font-style:oblique;
+    font-family: fantasy;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+.box_front_page{
+    grid-area: content;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    background-color: rgb(255, 255, 255);
+ }
+
+.ball {
+    width: 100px;
+    height: 100px;
+    background-color:  rgb(227, 190, 137);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: ballAni;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-fill-mode:none;
+    animation-iteration-count: infinite;
+    position:relative;
+}
+
+@keyframes ballAni {
+    0% {left:0%; top: 0%;}
+    10% {background-color:  rgb(227, 190, 137)}
+    12% {left: 10%; background-color: chartreuse;}
+    14% {background-color: rgb(227, 190, 137);}
+    25% { left: 0%; top: 86%;}
+    35% {background-color: rgb(227, 190, 137);}
+    37% {top: 76%; background-color: chartreuse;}
+    39% {background-color: rgb(227, 190, 137);}
+    50% { left: 88%; top: 86%;}
+    60% {background-color: rgb(227, 190, 137);}
+    62% {left: 78%; background-color: chartreuse;}
+    64% {background-color: rgb(227, 190, 137);}
+    75% {left: 88%; top: 0%;}
+    85% {background-color: rgb(227, 190, 137);}
+    87% {top: 10%; background-color: chartreuse;}
+    89% {background-color: rgb(227, 190, 137);}
+    100% {left: 0%; top: 0%;}
+  }
+
+
+
+  .hitter{
+    color: blanchedalmond;
+    width: 56.5%;
+    height: 50%;
+    background-color: black;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    animation-name: hitterAni;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-fill-mode:none;
+    animation-iteration-count: infinite;
+    position:relative;
+   }
+
+  @keyframes hitterAni {
+    0% {background-color: black;}
+    11% {background-color: black;}
+    12% { background-color: chartreuse;}
+    13% {background-color:  black;}
+    36% {background-color: black;}
+    37% {background-color: chartreuse;}
+    38% {background-color: black;}
+    61% {background-color: black;}
+    62% {background-color: chartreuse;}
+    63% {background-color: black;}
+    86% {background-color: black;}
+    87% {background-color: chartreuse;}
+    88% {background-color: black;}
+    100% {background-color: black;}
+  }
+
+
+  @media screen and (max-width: 1100px){
+    .hitter {
+        margin-left: 23%;
+        width: 55%;
+    }
+}
+@media screen and (max-width: 950px){
+    .hitter {
+        margin-left: 25%;
+        width: 53%;
+    }
+}
+@media screen and (max-width: 750px){
+    .hitter {
+        margin-left: 30%;
+        width: 47%;
+    }
+}
+@media screen and (max-width: 550px){
+    .hitter {
+        margin-left: 37%;
+        width: 40%;
+    }
+}
+
 @media screen and (max-width: 420px){
-    .menu_container {
+    .hitter {
+        width: 33%;
+        margin-left: 44%;
+    }
+}
+@media screen and (max-width: 380px){
+    .hitter {
+        width: 20%;
+        margin-left: 50%;
+    }
+    .button {
+        margin-top: 5px;
+        color: black;
+        background-color: rgb(230, 199, 156);
+        border-radius: 10%;
+        border-color: rgb(207, 172, 123);
+        padding: 1px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
